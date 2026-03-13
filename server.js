@@ -211,7 +211,7 @@ app.get('/', (req, res) => {
 // ---------------------------------------------------------------------------
 // Start
 // ---------------------------------------------------------------------------
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`\nPitch deck server running at http://localhost:${PORT}`);
   console.log(`Auth: ${process.env.SKIP_AUTH === '1' ? 'DISABLED (dev mode)' : 'enabled'}`);
   console.log(`Database: ${process.env.SQLITE_PATH || 'data/pitch-deck.db'}`);
