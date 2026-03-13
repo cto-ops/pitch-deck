@@ -91,7 +91,7 @@ module.exports = async (req, res) => {
                 <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 24px;">
                   Click below to sign in to the Admin dashboard:
                 </p>
-                <a href="${verifyUrl}" style="display: inline-block; background: #E85D2C; color: #fff; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 500;">
+                <a href="${verifyUrl}" style="display: inline-block; background: #3BB573; color: #fff; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 500;">
                   Open admin dashboard
                 </a>
                 <p style="color: #999; font-size: 13px; margin-top: 32px; line-height: 1.5;">
@@ -136,11 +136,11 @@ module.exports = async (req, res) => {
   h1 { font-size: 16px; font-weight: 400; text-align: center; margin-bottom: 32px; color: rgba(236,238,226,0.5); }
   label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(236,238,226,0.35); margin-bottom: 12px; }
   input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(236,238,226,0.1); border-radius: 6px; padding: 14px 16px; color: #ECEEE2; font-family: 'JetBrains Mono', monospace; font-size: 15px; outline: none; }
-  input:focus { border-color: rgba(232,93,44,0.5); }
-  button { width: 100%; margin-top: 16px; padding: 14px; background: rgba(232,93,44,0.12); border: 1px solid rgba(232,93,44,0.3); border-radius: 6px; color: #E85D2C; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; }
-  button:hover { background: rgba(232,93,44,0.2); border-color: rgba(232,93,44,0.5); }
+  input:focus { border-color: rgba(59,181,115,0.5); }
+  button { width: 100%; margin-top: 16px; padding: 14px; background: rgba(59,181,115,0.12); border: 1px solid rgba(59,181,115,0.3); border-radius: 6px; color: #3BB573; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; }
+  button:hover { background: rgba(59,181,115,0.2); border-color: rgba(59,181,115,0.5); }
   .error { margin-top: 16px; font-size: 13px; color: rgba(239,68,68,0.8); text-align: center; display: none; }
-  .success { margin-top: 16px; font-size: 13px; color: #E85D2C; text-align: center; display: none; }
+  .success { margin-top: 16px; font-size: 13px; color: #3BB573; text-align: center; display: none; }
   .divider { display: flex; align-items: center; gap: 16px; margin: 28px 0; }
   .divider-line { flex: 1; height: 1px; background: rgba(236,238,226,0.1); }
   .divider-text { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(236,238,226,0.2); }

@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="robots" content="noindex, nofollow">
-<title>AMERICAN NAIL — 2025</title>
+<title>HealthyBuddy.AI — 2026</title>
 <style>
 @font-face {
   font-family: 'Inter';
@@ -39,15 +39,16 @@
 }
 
 :root {
-  --bg: #000000;
-  --bg-deep: #000000;
-  --bg-surface: rgba(255,255,255,0.03);
-  --text: #ECEEE2;
-  --text-secondary: rgba(236,238,226,0.5);
-  --text-muted: rgba(236,238,226,0.2);
-  --accent: #E85D2C;
-  --accent-soft: rgba(232,93,44,0.12);
-  --divider: rgba(236,238,226,0.08);
+  --bg: #082A3C;
+  --bg-deep: #061E2C;
+  --bg-surface: rgba(255,255,255,0.04);
+  --text: #F0F4F0;
+  --text-secondary: rgba(240,244,240,0.55);
+  --text-muted: rgba(240,244,240,0.22);
+  --accent: #3BB573;
+  --accent-soft: rgba(59,181,115,0.12);
+  --accent-border: rgba(59,181,115,0.25);
+  --divider: rgba(240,244,240,0.08);
 }
 
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0 }
@@ -183,7 +184,7 @@ body::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(232,93,44,0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(59,181,115,0.15) 0%, transparent 70%);
   z-index: 0;
 }
 .hero::before {
@@ -370,7 +371,7 @@ body::after {
   background: var(--bg);
   padding: 32px 32px;
 }
-.cap-card.featured { background: rgba(232,93,44,0.04) }
+.cap-card.featured { background: rgba(59,181,115,0.04) }
 .cap-icon {
   font-family: 'Inter', sans-serif;
   font-size: 32px;
@@ -429,7 +430,7 @@ body::after {
   .partner-card.pc-open .pc-chevron { transform: rotate(180deg); opacity: 0.7; }
   .partner-card .pc-header { display: flex; align-items: center; gap: 8px; }
 }
-.partner-card.featured { background: rgba(232,93,44,0.03) }
+.partner-card.featured { background: rgba(59,181,115,0.03) }
 .partner-card .pc-name {
   font-family: 'Inter', sans-serif;
   font-weight: 700; font-size: 20px;
@@ -569,7 +570,7 @@ body::after {
   position: relative;
 }
 .bar-chart .bar-fill.muted {
-  background: rgba(232,93,44,0.25);
+  background: rgba(59,181,115,0.25);
 }
 .bar-chart .bar-value {
   font-family: 'Inter', sans-serif;
@@ -594,14 +595,14 @@ body::after {
   align-items: center;
   justify-content: space-between;
   padding: 18px 24px;
-  background: rgba(232,93,44,0.04);
-  border: 1px solid rgba(232,93,44,0.15);
+  background: rgba(59,181,115,0.04);
+  border: 1px solid rgba(59,181,115,0.15);
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .accordion-row:hover {
-  border-color: rgba(232,93,44,0.35);
+  border-color: rgba(59,181,115,0.35);
 }
 .accordion-expand {
   max-height: 0;
@@ -611,10 +612,10 @@ body::after {
 }
 .accordion-body {
   padding: 20px 24px;
-  border: 1px solid rgba(232,93,44,0.15);
+  border: 1px solid rgba(59,181,115,0.15);
   border-top: none;
   border-radius: 0 0 12px 12px;
-  background: rgba(232,93,44,0.03);
+  background: rgba(59,181,115,0.03);
 }
 .accordion-chevron {
   width: 20px;
@@ -645,17 +646,17 @@ body::after {
   border-bottom: 2px solid transparent;
 }
 .core-tab-active {
-  border: 1px solid rgba(232,93,44,0.3);
-  background: rgba(232,93,44,0.08);
+  border: 1px solid rgba(59,181,115,0.3);
+  background: rgba(59,181,115,0.08);
   color: var(--accent);
   border-bottom: 2px solid var(--accent);
 }
 .tab-container {
-  border: 1px solid rgba(232,93,44,0.15);
+  border: 1px solid rgba(59,181,115,0.15);
   border-top: none;
   border-radius: 0 0 12px 12px;
   padding: 28px;
-  background: rgba(232,93,44,0.03);
+  background: rgba(59,181,115,0.03);
 }
 
 /* ─── DETAIL CARDS ─── */
@@ -697,7 +698,7 @@ body::after {
   background: var(--bg);
   padding: 48px 40px;
 }
-.timeline-card.current { background: rgba(232,93,44,0.04) }
+.timeline-card.current { background: rgba(59,181,115,0.04) }
 .timeline-year {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
@@ -1024,7 +1025,7 @@ body::after {
   font-size: 13px;
 }
 .inline-bar-fill.green { background: var(--accent); color: var(--bg) }
-.inline-bar-fill.red { background: rgba(204,80,50,0.5); color: var(--text) }
+.inline-bar-fill.red { background: rgba(40,140,85,0.5); color: var(--text) }
 .inline-bar-annotation {
   display: flex;
   justify-content: space-between;
@@ -1081,7 +1082,7 @@ body::after {
     transition: border-color 0.15s ease, transform 0.15s ease;
   }
   .slide-progress:active { transform: scale(0.92); }
-  .slide-progress.fab-open { border-color: rgba(232,93,44,0.4); color: var(--accent); }
+  .slide-progress.fab-open { border-color: rgba(59,181,115,0.4); color: var(--accent); }
   .slide-progress.visible { opacity: 1; }
 }
 
@@ -1199,11 +1200,11 @@ body::after {
   -webkit-tap-highlight-color: transparent;
 }
 .slide-fab-sheet .fab-item:active {
-  background: rgba(232,93,44,0.1);
+  background: rgba(59,181,115,0.1);
 }
 .slide-fab-sheet .fab-item.active {
   color: var(--accent);
-  background: rgba(232,93,44,0.06);
+  background: rgba(59,181,115,0.06);
 }
 .slide-fab-sheet .fab-item .fab-count {
   font-size: 9px;
@@ -1286,7 +1287,7 @@ body::after {
 }
 .core-panel {
   background: var(--accent-soft);
-  border: 1px solid rgba(232,93,44,0.15);
+  border: 1px solid rgba(59,181,115,0.15);
   border-radius: 12px;
   padding: 24px;
   cursor: pointer;
@@ -1313,7 +1314,7 @@ body::after {
 }
 .core-panel-detail {
   padding-top: 16px;
-  border-top: 1px solid rgba(232,93,44,0.12);
+  border-top: 1px solid rgba(59,181,115,0.12);
   margin-top: 16px;
 }
 .core-stat-grid {
@@ -1327,14 +1328,14 @@ body::after {
   border-radius: 8px;
 }
 .core-stat-card.highlighted {
-  background: rgba(232,93,44,0.06);
-  border: 1px solid rgba(232,93,44,0.2);
+  background: rgba(59,181,115,0.06);
+  border: 1px solid rgba(59,181,115,0.2);
 }
 .core-insight {
   margin-top: 16px;
   padding: 16px 20px;
-  background: rgba(232,93,44,0.06);
-  border: 1px solid rgba(232,93,44,0.15);
+  background: rgba(59,181,115,0.06);
+  border: 1px solid rgba(59,181,115,0.15);
   border-radius: 8px;
   font-size: 16px;
   color: var(--text);
@@ -1373,9 +1374,9 @@ body::after {
 /* ─── PLATFORM CALLOUT ─── */
 .platform-callout {
   padding: 14px 28px;
-  border: 1px solid rgba(232,93,44,0.25);
+  border: 1px solid rgba(59,181,115,0.25);
   border-radius: 8px;
-  background: rgba(232,93,44,0.04);
+  background: rgba(59,181,115,0.04);
   text-align: center;
 }
 .platform-callout-text {
@@ -1393,7 +1394,7 @@ body::after {
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-logo">
-    <span style="font-family:'Inter',sans-serif;font-weight:700;font-size:18px;color:var(--accent);letter-spacing:0.1em">AMERICAN NAIL</span>
-    <span class="nav-logo-label">2025</span>
+    <span style="font-family:'Inter',sans-serif;font-weight:700;font-size:18px;color:var(--accent);letter-spacing:0.04em">HealthyBuddy.AI</span>
+    <span class="nav-logo-label">2026</span>
   </div>
 </nav>

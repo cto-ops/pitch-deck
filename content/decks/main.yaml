@@ -1,28 +1,30 @@
-title: "AMERICAN NAIL — 2025"
+title: "HealthyBuddy.AI — 2026"
 tail: full
 output: page.html
 
 sections:
-  - name: AMERICAN NAIL
+  - name: HealthyBuddy.AI
     slides:
-      - hero
-  - name: Mission
+      - hb-hero
+  - name: Problem
     slides:
-      - mission
-  - name: Technology
+      - hb-problem
+      - hb-insight
+  - name: Product
     slides:
-      - tech
-      - analysis
-  - name: Products
+      - hb-product
+  - name: Market
     slides:
-      - products
-  - name: Intel
+      - hb-market
+      - hb-model
+  - name: Strategy
     slides:
-      - intel
-  - name: Deploy
+      - hb-competitive
+      - hb-gtm
+  - name: Traction
     slides:
-      - deploy
-      - careers
+      - hb-traction
+      - hb-team
   - name: Close
     slides:
-      - close
+      - hb-close

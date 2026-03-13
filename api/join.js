@@ -114,7 +114,7 @@ module.exports = async (req, res) => {
           <p style="color: #333; font-size: 16px; line-height: 1.6; margin-bottom: 24px;">
             Click below to view the pitch deck:
           </p>
-          <a href="${verifyUrl}" style="display: inline-block; background: #E85D2C; color: #fff; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 500;">
+          <a href="${verifyUrl}" style="display: inline-block; background: #3BB573; color: #fff; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 500;">
             Open deck
           </a>
           <p style="color: #999; font-size: 13px; margin-top: 32px; line-height: 1.5;">

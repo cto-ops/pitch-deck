@@ -13,13 +13,13 @@ function renderLanding(token, next, invite) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>AMERICAN NAIL — Verify</title>
+<title>HealthyBuddy.AI — Verify</title>
 <style>
   @font-face { font-family: 'Inter'; src: url('/fonts/Inter-Regular.woff2') format('woff2'); font-weight: 400; }
   @font-face { font-family: 'JetBrains Mono'; src: url('/fonts/JetBrainsMono-Latin.woff2') format('woff2'); font-weight: 300; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: #111111;
+    background: #082A3C;
     color: #ECEEE2;
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -35,7 +35,7 @@ function renderLanding(token, next, invite) {
     font-weight: 700;
     font-size: 36px;
     letter-spacing: 0.1em;
-    color: #E85D2C;
+    color: #3BB573;
     opacity: 0.6;
   }
   h2 { font-size: 18px; font-weight: 400; margin-bottom: 12px; }
@@ -43,10 +43,10 @@ function renderLanding(token, next, invite) {
   button {
     width: 100%;
     padding: 14px;
-    background: rgba(232,93,44,0.12);
-    border: 1px solid rgba(232,93,44,0.3);
+    background: rgba(59,181,115,0.12);
+    border: 1px solid rgba(59,181,115,0.3);
     border-radius: 6px;
-    color: #E85D2C;
+    color: #3BB573;
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
     letter-spacing: 1.5px;
@@ -54,12 +54,12 @@ function renderLanding(token, next, invite) {
     cursor: pointer;
     transition: background 0.2s, border-color 0.2s;
   }
-  button:hover { background: rgba(232,93,44,0.2); border-color: rgba(232,93,44,0.5); }
+  button:hover { background: rgba(59,181,115,0.2); border-color: rgba(59,181,115,0.5); }
 </style>
 </head>
 <body>
 <div class="box">
-  <div class="wordmark">AMERICAN NAIL</div>
+  <div class="wordmark">HealthyBuddy.AI</div>
   <h2>Open your deck</h2>
   <p>Click below to continue to the pitch deck.</p>
   <form method="POST" action="/api/verify">
