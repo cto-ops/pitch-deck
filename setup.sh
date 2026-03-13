@@ -21,20 +21,14 @@ cd "$DIR"
 echo "=== Installing deps ==="
 npm install --omit=dev
 
-echo "=== Creating .env ==="
-cat > .env <<'EOF'
-SKIP_AUTH=1
-SITE_URL=https://deck-test.healthybuddy.ai
-EOF
-
 echo "=== Init DB ==="
+# Auth auto-disables when RESEND_API_KEY is not set — no .env needed
 node sqlite-init.js
 
 echo "=== Building deck ==="
 node build.js
 
 echo "=== Starting server ==="
-export SKIP_AUTH=1
 nohup node server.js > /tmp/pitch-deck.log 2>&1 &
 PID=$!
 sleep 2

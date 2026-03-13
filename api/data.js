@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   const session = await getSession(req);
 
   if (!session) {
-    res.writeHead(302, { Location: '/login.html?next=%2Fdata' });
+    res.writeHead(302, { Location: '/?next=%2Fdata' });
     res.end();
     return;
   }

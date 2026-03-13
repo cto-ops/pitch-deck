@@ -8,10 +8,7 @@ git pull
 
 npm install --omit=dev
 
-# Ensure .env exists
-[ -f .env ] || echo 'SKIP_AUTH=1' > .env
-
-export SKIP_AUTH=1
+# Auth auto-disables when RESEND_API_KEY is not set (no .env needed)
 node sqlite-init.js
 node build.js
 

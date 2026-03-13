@@ -3,11 +3,11 @@ const { join } = require('path');
 const { getSession } = require('./_lib/auth');
 
 module.exports = async (req, res) => {
-  const isDev = process.env.SKIP_AUTH === '1';
-  const session = isDev ? { email: 'dev@localhost' } : await getSession(req);
+  const skipAuth = process.env.SKIP_AUTH === '1' || !process.env.RESEND_API_KEY;
+  const session = skipAuth ? { email: 'anonymous@localhost' } : await getSession(req);
 
   if (!session) {
-    res.writeHead(302, { Location: '/login.html' });
+    res.writeHead(302, { Location: '/' });
     res.end();
     return;
   }

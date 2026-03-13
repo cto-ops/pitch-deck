@@ -28,6 +28,6 @@ module.exports = async (req, res) => {
     'site-auth=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
     'admin-auth=; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=0',
   ]);
-  res.writeHead(302, { Location: '/login.html' });
+  res.writeHead(302, { Location: '/' });
   res.end();
 };

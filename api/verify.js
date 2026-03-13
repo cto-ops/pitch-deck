@@ -82,7 +82,7 @@ module.exports = async (req, res) => {
     const invite = url.searchParams.get('invite') || '';
 
     if (!token) {
-      res.writeHead(302, { Location: '/login.html' });
+      res.writeHead(302, { Location: '/' });
       res.end();
       return;
     }
@@ -95,7 +95,7 @@ module.exports = async (req, res) => {
       `;
 
       if (rows.length === 0) {
-        res.writeHead(302, { Location: '/login.html?expired=1' });
+        res.writeHead(302, { Location: '/?expired=1' });
         res.end();
         return;
       }
@@ -104,7 +104,7 @@ module.exports = async (req, res) => {
       res.end(renderLanding(token, next, invite));
     } catch (e) {
       console.error('Verify GET error:', e);
-      res.writeHead(302, { Location: '/login.html' });
+      res.writeHead(302, { Location: '/' });
       res.end();
     }
     return;
@@ -139,7 +139,7 @@ module.exports = async (req, res) => {
     const inviteCode = params.get('invite') || '';
 
     if (!token) {
-      res.writeHead(302, { Location: '/login.html' });
+      res.writeHead(302, { Location: '/' });
       res.end();
       return;
     }
@@ -153,7 +153,7 @@ module.exports = async (req, res) => {
     `;
 
     if (rows.length === 0) {
-      res.writeHead(302, { Location: '/login.html?expired=1' });
+      res.writeHead(302, { Location: '/?expired=1' });
       res.end();
       return;
     }
@@ -232,7 +232,7 @@ module.exports = async (req, res) => {
       return;
     }
     console.error('Verify POST error:', e);
-    res.writeHead(302, { Location: '/login.html' });
+    res.writeHead(302, { Location: '/' });
     res.end();
   }
 };

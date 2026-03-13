@@ -198,8 +198,11 @@ app.all('/data', mount(require('./api/data')));
 const RELOAD_SNIPPET = `<script>new EventSource("/__reload").addEventListener("reload",()=>location.reload())</script>`;
 
 app.get('/', (req, res) => {
-  // Dev mode: skip auth (must be explicitly enabled)
-  const skipAuth = process.env.SKIP_AUTH === '1';
+  // Skip auth if explicitly set OR if email auth can't work (no Resend API key)
+  const skipAuth = process.env.SKIP_AUTH === '1' || !process.env.RESEND_API_KEY;
+
+  // Prevent Cloudflare/browsers from caching auth redirects
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
 
   if (skipAuth) {
     const htmlPath = path.join(contentDir, 'page.html');
@@ -222,7 +225,8 @@ app.get('/', (req, res) => {
 // ---------------------------------------------------------------------------
 const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`\nPitch deck server running at http://localhost:${PORT}`);
-  console.log(`Auth: ${process.env.SKIP_AUTH === '1' ? 'DISABLED (dev mode)' : 'enabled'}`);
+  const authOff = process.env.SKIP_AUTH === '1' || !process.env.RESEND_API_KEY;
+  console.log(`Auth: ${authOff ? 'DISABLED (no RESEND_API_KEY)' : 'enabled'}`);
   console.log(`Database: ${process.env.SQLITE_PATH || 'data/pitch-deck.db'}`);
   console.log(`Watching: content/slides/, content/decks/, content/head.html, content/tail*.html\n`);
 });
