@@ -23,6 +23,15 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+
+// Load .env file (no dependency needed)
+const envPath = path.join(__dirname, '.env');
+if (fs.existsSync(envPath)) {
+  for (const line of fs.readFileSync(envPath, 'utf8').split('\n')) {
+    const m = line.match(/^\s*([^#=]+?)\s*=\s*(.*?)\s*$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
+  }
+}
 const { closeDb } = require('./api/_lib/db');
 
 const app = express();
