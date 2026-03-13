@@ -1,0 +1,22 @@
+[Unit]
+Description=Pitch Deck Server
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/pitch-deck
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+EnvironmentFile=/opt/pitch-deck/.env
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/pitch-deck/data
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

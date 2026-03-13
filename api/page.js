@@ -3,7 +3,7 @@ const { join } = require('path');
 const { getSession } = require('./_lib/auth');
 
 module.exports = async (req, res) => {
-  const isDev = process.env.VERCEL_ENV !== 'production' && !process.env.VERCEL;
+  const isDev = process.env.SKIP_AUTH === '1';
   const session = isDev ? { email: 'dev@localhost' } : await getSession(req);
 
   if (!session) {

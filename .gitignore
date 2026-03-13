@@ -4,3 +4,5 @@ node_modules
 content/page.html
 .env
 .env.*
+# SQLite database
+data/
